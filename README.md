@@ -19,6 +19,10 @@ NLTK PUNKT is an unsupervised trainable tokenizer that splits text into sentence
 Download tokenizer
 nltk.download("punkt")
 
+# Tokenize the sentence into words
+from nltk.tokenize import word_tokenize
+words = word_tokenize(sentence)
+
 ### Get Unique words from sentences in content
 This can be done by eliminating
 1. Stop words
@@ -32,10 +36,6 @@ stop_words = set(stopwords.words("english"))
 
 then remove stop words from the sentence
 filtered_sentence = [word for word in words if word.lower() not in stop_words]
-
-# Tokenize the sentence into words
-from nltk.tokenize import word_tokenize
-words = word_tokenize(sentence)
 
 ### Scoring words in the content
 The free text of the content should be converted to a vector that we can use as input or output for a machine learning model.
