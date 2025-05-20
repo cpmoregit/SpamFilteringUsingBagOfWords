@@ -12,7 +12,7 @@ Machine Language(ML) Algorithms can interpret and analyze numeric data. Each wor
 NLTK PUNKT is an unsupervised trainable tokenizer that splits text into sentences. You can install it with nltk.download('punkt'). PUNKT automatically recognizes abbreviations, acronyms, and sentence boundaries without manual annotation. You can train it on your own corpus to improve accuracy for domain-specific text. This tokenizer works across multiple languages and handles punctuation marks intelligently.
 
 Download tokenizer
-__nltk.download("punkt")__
+__*nltk.download("punkt")*__
 
 ## Tokenize the sentence into words
 Tokenization is the process of breaking down a piece of text into smaller units, typically words.
@@ -20,6 +20,7 @@ Tokenization is the process of breaking down a piece of text into smaller units,
 Tokenization can be performed using NLTK.
 
 __*from nltk.tokenize import word_tokenize*__
+
 __*words = word_tokenize(sentence)*__
 
 ### Get Unique words from sentences in content
@@ -28,7 +29,8 @@ This can be done by eliminating
 2. Non-alphabetic characters
 3. Convert the words to lowercase
 
-To identify the stop words use "from nltk.corpus import stopwords".
+To identify the stop words use 
+__*from nltk.corpus import stopwords*__
 
 First get the list of stop words in English as follow
 __*stop_words = set(stopwords.words("english"))*__
