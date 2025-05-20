@@ -14,7 +14,7 @@ NLTK PUNKT is an unsupervised trainable tokenizer that splits text into sentence
 Download tokenizer
 nltk.download("punkt")
 
-# Tokenize the sentence into words
+## Tokenize the sentence into words
 Tokenization is the process of breaking down a piece of text into smaller units, typically words.
 
 Tokenization can be performed using NLTK.
