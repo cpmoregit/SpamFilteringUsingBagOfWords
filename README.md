@@ -28,6 +28,7 @@ This can be done by eliminating
 1. Stop words
 2. Non-alphabetic characters
 3. Convert the words to lowercase
+4. Spelling Corrections
 
 To identify the stop words use 
 __*from nltk.corpus import stopwords*__
@@ -39,6 +40,16 @@ __*stop_words = set(stopwords.words("english"))*__
 then remove stop words from the sentence
 
 __*filtered_sentence = [word for word in words if word.lower() not in stop_words]*__
+
+### Remove Non-alphabetic Caharacters 
+__*text = re.sub('[^A-Za-z]', ' ', text)*__
+
+### Convert the words to lowercase
+__*text = text.lower()*__
+
+### Spelling Corrections
+__*from autocorrect import spell*__
+__*text.append(spell(word))*__
 
 ### Scoring words in the content
 The free text of the content should be converted to a vector that we can use as input or output for a machine learning model.
