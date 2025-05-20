@@ -8,11 +8,6 @@ Contents of email or messages are english language sentences. Each sentences are
 
 Machine Language(ML) Algorithms can interpret and analyze numeric data. Each word in the content should be represented by numeric value.
 
-### Tokenization
-Tokenization is the process of breaking down a piece of text into smaller units, typically words.
-
-Tokenization can be performed using NLTK.
-
 ## Split sentences
 NLTK PUNKT is an unsupervised trainable tokenizer that splits text into sentences. You can install it with nltk.download('punkt'). PUNKT automatically recognizes abbreviations, acronyms, and sentence boundaries without manual annotation. You can train it on your own corpus to improve accuracy for domain-specific text. This tokenizer works across multiple languages and handles punctuation marks intelligently.
 
@@ -20,6 +15,10 @@ Download tokenizer
 nltk.download("punkt")
 
 # Tokenize the sentence into words
+Tokenization is the process of breaking down a piece of text into smaller units, typically words.
+
+Tokenization can be performed using NLTK.
+
 from nltk.tokenize import word_tokenize
 words = word_tokenize(sentence)
 
