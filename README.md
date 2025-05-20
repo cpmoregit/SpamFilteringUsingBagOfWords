@@ -13,19 +13,29 @@ Tokenization is the process of breaking down a piece of text into smaller units,
 
 Tokenization can be performed using NLTK.
 
-Import "word_tokeinze" from "nltk.tokenize"
-from nltk.tokenize import word_tokenize
+Split sentences
+NLTK PUNKT is an unsupervised trainable tokenizer that splits text into sentences. You can install it with nltk.download('punkt'). PUNKT automatically recognizes abbreviations, acronyms, and sentence boundaries without manual annotation. You can train it on your own corpus to improve accuracy for domain-specific text. This tokenizer works across multiple languages and handles punctuation marks intelligently.
 
-### Identify Unique words
-We need to find the unique words in the content.
+Download tokenizer
+nltk.download("punkt")
 
+### Get Unique words from sentences in content
 This can be done by eliminating
 1. Stop words
 2. Non-alphabetic characters
 3. Convert the words to lowercase
-4. Correct spelling
 
 To identify the stop words use "from nltk.corpus import stopwords".
+
+First get the list of stop words in English as follow
+stop_words = set(stopwords.words("english"))
+
+then remove stop words from the sentence
+filtered_sentence = [word for word in words if word.lower() not in stop_words]
+
+# Tokenize the sentence into words
+from nltk.tokenize import word_tokenize
+words = word_tokenize(sentence)
 
 ### Scoring words in the content
 The free text of the content should be converted to a vector that we can use as input or output for a machine learning model.
