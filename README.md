@@ -48,7 +48,9 @@ __*text = re.sub('[^A-Za-z]', ' ', text)*__
 __*text = text.lower()*__
 
 ### Spelling Corrections
+
 __*from autocorrect import spell*__
+
 __*text.append(spell(word))*__
 
 ### Scoring words in the content
