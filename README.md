@@ -13,7 +13,7 @@ Tokenization is the process of breaking down a piece of text into smaller units,
 
 Tokenization can be performed using NLTK.
 
-Split sentences
+## Split sentences
 NLTK PUNKT is an unsupervised trainable tokenizer that splits text into sentences. You can install it with nltk.download('punkt'). PUNKT automatically recognizes abbreviations, acronyms, and sentence boundaries without manual annotation. You can train it on your own corpus to improve accuracy for domain-specific text. This tokenizer works across multiple languages and handles punctuation marks intelligently.
 
 Download tokenizer
