@@ -33,9 +33,11 @@ To identify the stop words use
 __*from nltk.corpus import stopwords*__
 
 First get the list of stop words in English as follow
+
 __*stop_words = set(stopwords.words("english"))*__
 
 then remove stop words from the sentence
+
 __*filtered_sentence = [word for word in words if word.lower() not in stop_words]*__
 
 ### Scoring words in the content
